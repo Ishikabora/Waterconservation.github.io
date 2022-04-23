@@ -1,0 +1,135 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: cursive;
+    
+ 
+}
+
+.hero{
+    width: 100%;
+    height: 100vh;
+    background-image: url(a.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.content h1{
+    margin-top: 36px;
+    z-index: 4;
+    position: relative;
+    font-size: 4em;
+    color: rgb(181, 215, 255);
+    text-transform: uppercase;
+    left: 50px;
+
+}
+
+.drops img{
+    width: 50px;
+    animation: drop 7s linear infinite;
+}
+
+.drops{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    top: -80px;
+
+}
+
+@keyframes drop{
+    0%{
+        transform: translateY(0);
+        opacity: 0;
+    }
+    50%{
+       
+        opacity: 1;
+    }
+    70%{
+        
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(80vh);
+        opacity: 0;
+    }
+}
+
+.drops img:nth-child(1){
+    animation-delay: 2s;
+}
+.drops img:nth-child(2){
+    animation-delay: 1s;
+}
+.drops img:nth-child(3){
+    animation-delay: 3s;
+}
+.drops img:nth-child(4){
+    animation-delay: 4s;
+}
+.drops img:nth-child(5){
+    animation-delay: 3s;
+}
+.drops img:nth-child(6){
+    animation-delay: 6s;
+}
+.drops img:nth-child(7){
+    animation-delay: 7s;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.wrapper{
+    display: inline-flex;
+    position: relative;
+    left: 100px;
+}
+
+
+
+
+.wrapper .dynamic-txts{
+  margin-left: 15px;
+  height: 30px;
+  line-height: 30px;
+  overflow: hidden; 
+}
+
+.dynamic-txts li{
+    list-style: none;
+    font-size: 25px;
+    color: rgb(181, 215, 255);
+    position: relative;
+    top: 0;
+    animation: slide 15s steps(6) infinite;
+}
+
+@keyframes slide {
+    100%{
+        top: -360px;
+    }
+}
+
+
+.dynamic-txts li span{
+    position: relative;
+}
+
+.dynamic-txts li span::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
